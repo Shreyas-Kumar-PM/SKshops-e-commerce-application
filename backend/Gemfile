@@ -1,0 +1,15 @@
+source "https://rubygems.org"
+
+ruby "3.4.7"
+
+gem "rails", "~> 8.1.0"    # keep whatever Rails version was generated
+gem "pg"
+gem "puma"
+gem "bootsnap", require: false   # 👈 add this line
+
+gem "rack-cors"
+gem "bcrypt", "~> 3.1.7"
+
+group :development, :test do
+  gem "debug", platforms: %i[mri mingw x64_mingw]
+end

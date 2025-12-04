@@ -1,0 +1,380 @@
+:root {
+  --bg: #12141b;
+  --bg-elevated: #181b23;
+  --bg-card: #1f222b;
+  --accent: #f6c453;
+  --accent-soft: rgba(246, 196, 83, 0.15);
+  --text-main: #f5f5f5;
+  --text-muted: #9ca3af;
+  --border-subtle: #2a2d36;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-main);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Inter", sans-serif;
+}
+
+.app-root {
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #242837 0, #12141b 50%);
+  color: var(--text-main);
+}
+
+.app-navbar {
+  background-color: #111217 !important;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.brand-text {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+}
+
+.brand-text .accent {
+  color: var(--accent);
+}
+
+.main-container {
+  padding-bottom: 40px;
+}
+
+
+.sidebar {
+  position: sticky;
+  top: 76px;
+}
+
+.sidebar-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+}
+
+.small-heading {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+.profile-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.avatar-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+
+.product-card {
+  background-color: var(--bg-card);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-soft);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+
+.product-image-wrapper {
+  padding: 10px;
+  background: radial-gradient(circle at top, #2a3043 0, #151720 60%);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.product-image-wrapper img {
+  max-height: 150px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.product-title {
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.product-price {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.page-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+.product-detail-image-wrapper {
+  background: radial-gradient(circle at top, #2a3043 0, #151720 60%);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid var(--border-subtle);
+}
+
+.product-detail-image-wrapper img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.section-title {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.review-card {
+  background-color: #181b23;
+  border: 1px solid var(--border-subtle);
+}
+
+
+a,
+a:visited {
+  color: inherit;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+.btn-warning {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #1a1a1a;
+}
+
+.btn-warning:hover {
+  background-color: #ffd878;
+  border-color: #ffd878;
+}
+
+
+.profile-card {
+  max-width: 520px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+}
+
+.profile-row {
+  margin-bottom: 1.25rem;
+}
+
+.profile-label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.2rem;
+}
+
+.profile-value {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+
+.order-card {
+  max-width: 720px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+}
+
+.order-id {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+}
+
+.order-date {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.order-total {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.order-status {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.order-divider {
+  border-color: var(--border-subtle);
+  opacity: 0.7;
+}
+
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.order-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.order-item-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.order-item-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.order-item-qty {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.order-item-price {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+.product-card {
+  padding: 1.5rem;
+  border-radius: 16px;
+  min-height: 260px;
+}
+
+.product-card img {
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.product-card-img-wrapper {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.product-card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.review-section {
+  margin-top: 3rem;
+}
+
+.review-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: #f9fafb;
+}
+
+.review-author {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.review-rating {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #ffd86b;
+}
+
+.review-comment {
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
+  color: #e5e7eb;
+}
+
+.review-form .form-label {
+  color: #f9fafb;
+}
+
+.review-form .form-control,
+.review-form .form-select {
+  background-color: rgba(15, 23, 42, 0.9);
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  color: #f9fafb;
+}
+
+.review-form .form-control::placeholder {
+  color: rgba(148, 163, 184, 0.8);
+}
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.auth-card {
+  width: 420px;
+  padding: 35px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.auth-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #f4c04e;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.auth-btn:hover {
+  background-color: #e3b146;
+}
+  
+.auth-card label {
+  color: #eee;
+  font-weight: 500;
+}
